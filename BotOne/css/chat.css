@@ -1,0 +1,226 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    
+}
+body{
+    background-color: floralwhite;
+}
+nav{
+
+
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color:black;
+    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.nav-links{
+    float: right;
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: white;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-links a:hover{
+    background: coral;
+    color: white;
+    border-radius: 1px;
+    padding: 4px;
+}
+.heading{
+
+    position:absolute;
+    top: 2.4vh;
+    left: 8vw;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: aquamarine;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.highlight{
+    font-size: 12px;
+    font-family:sans-serif;
+    color: coral;
+    font-weight: 900;
+}
+.button{
+    position: absolute;
+    top: 5vh;
+    left: 94vw;
+   width: 110px;
+    height: 20px;
+    text-align: center;
+    line-height: 22px;
+    list-style-type: circle;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 
+   
+    
+}
+.button svg,
+.button svg rect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    
+    
+}
+.button svg rect{
+   
+               stroke:  aqua;
+            stroke-width: 4;
+            transition: 2s ;
+            stroke-dasharray: 20 110;
+            stroke-dashoffset: 280;
+}
+.button:hover svg rect{
+        stroke: #ff8000;
+            stroke-dasharray: 110 20 ;
+            stroke-dashoffset: 0;
+}
+
+.textbox{
+  
+    position:absolute; 
+    top:15vh;
+    left: 50vw;
+    padding-left: 10px;
+   border: 1.2px solid dimgray;
+    background-color: transparent;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 1px 0 rgba(3, 3, 3, 0.27), 
+                4px 5px 5px 0 rgba(0, 0, 0, 0.2);
+    width:40%; 
+    margin-left:4.5%;
+    margin-right:2.25%; 
+    height:70%; 
+    resize:none; 
+    font-family: cursive;
+    font-weight: bold;
+    overflow-y:auto;
+    user-select:none; 
+    font-size:14px;
+   
+  
+}  
+.input-box{
+    position: absolute;
+    top: 88%;
+    left: 58vw;
+    width: 25%;
+    height: 4%;
+    padding: 10px;
+    bottom: 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    outline: none;
+    
+    border: 1.5px solid dimgray;
+    border-radius: 5px;
+    
+    
+    
+}
+.label-name{
+    position: absolute;
+   top: 90%;
+    left: 58vw;
+    width: 25%;
+    height: 4%;
+    padding-top: 10px;
+    bottom: 0px;
+    pointer-events: none;
+    font-size: 16px;
+}
+.send-btn {
+    position: absolute;
+    top: 89%;
+    left: 84vw;
+    width: 10%;
+    height: 5%;
+    padding:0;
+    background: transparent;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: cursive;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+.content-name{
+    color: solid black;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name
+
+{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: blue;
+    
+}
+
+.form input:focus + .label-name::after
+
+{
+    transform: translateX(0%);
+}
+.container{
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+#progressbar{
+    position: fixed;
+    top: 0;
+
+    right: 0;
+    width: 5px;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top,#fcb045,#fd1d1d,#833ab4);
+    
+}  
+

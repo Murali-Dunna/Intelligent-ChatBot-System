@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<meta http-equiv="X-U-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    
+      <link rel="stylesheet" href="about.css">
+    <title> About</title>
+</head>
+    <body>
+        
+            
+        <div class="image">
+        <a href="Welcome.html"><img class="logo" src="logo1.png" height="40"  width="40" ></a>    
+        </div>
+        
+  
+        <a class="button" href="login.html">
+      <svg><rect></rect></svg>
+       LOGOUT
+        </a>
+    
+   
+    
+    <nav>
+     
+           <div >
+            <a href="Welcome.html" class="heading">
+                BO<span class="highlight">T</span>ONE
+            </a>
+        </div>
+        
+        
+        <ul class="nav-links">
+        <li>
+            <a href="about.html">ABOUT</a>
+            </li>
+                  <li>
+            <a href="blog.html">BLOGS</a>
+            </li> 
+              
+                  <li>
+            <a href="resource.html">RESOURCES</a>
+            </li>  
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+         
+         
+      </ul>
+     
+   </nav>
+      <div class="about-content">
+          <h1>ABOUT</h1> <br>
+          <h2>What is a Chatbot?</h2><br>
+          <p>A chatbot is a piece of software that conducts a conversation via auditory or textual methods. Such programs are often designed to convincingly simulate how a human would behave as a conversational partner, although as of 2019, they are far short of being able to pass the Turing test. Chatbots are typically used in dialog systems for various practical purposes including customer service or information acquisition. Some chatbots use sophisticated natural language processing systems, but many simpler ones scan for keywords within the input, then pull a reply with the most matching keywords, or the most similar wording pattern, from a database. </p><br>
+          <p>A chatbot is an artificial intelligence (AI) software that can simulate a conversation (or a chat) with a user in natural language through messaging applications, websites, mobile apps or through the telephone.
+          </p><br>
+          <p>A chatbot is a software program for simulating intelligent conversations with human using rules or artificial intelligence. Users interact with the chatbot via conversational interface through written or spoken text.
+          </p><br><br>
+          <h2>Why are chatbots important?</h2><br>
+          <p> A chatbot is often described as one of the most advanced and promising expressions of interaction between humans and machines. However, from a technological point of view, a chatbot only represents the natural evolution of a Question Answering system leveraging Natural Language Processing (NLP).
+          </p><br>
+          <p> Formulating responses to questions in natural language is one of the most typical Examples of Natural Language Processing applied in various enterprises’ end-use applications.
+          </p><br><br>
+          <h2>The rise of chatbot?</h2>
+          <p>In everyday life, while we converse, communicate with our friends, families and peers, we become aware of the context of the subject discussed. For instance, when someone says he is reading a book, you would ask him who the author is or if he likes the book; you would not ask him if he had read another book. You respond in the best possible way for the moment. Contextual communication is emerging as the standard of interaction, and chatbots are making their mark by conversing contextually
+          </p><br><br>
+          <h2>Chatbot user experience?</h2><br>
+          <p>User experience has always been referred to convenient and easy interactions with a product. When the interface connecting man and machine becomes intelligent and conversational, it becomes easy for the user to converse with the machine and get things done on human terms. Chatbot has demonstrated the power and convenience of conversational interfaces. As of now, language is emerging as the interface.
+          </p>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        
+        <div id="progressbar"></div>
+    
+    </body>
+ 
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+    $(window).scroll(function(){
+        var scroll=$(window).scrollTop(),
+            dh=$(document).height(),
+            wh=$(window).height();
+        scrollPercent=(scroll/(dh-wh))*100;
+        $('#progressbar').css('height',scrollPercent + '%');
+    })
+</script>
+</html>

@@ -1,0 +1,153 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+
+
+section{
+   
+    background:rgba(255, 134, 80, 0.05);
+    height: 100vh;
+}
+h2{
+    position:absolute;
+    top: 10vh;
+ left: 38%;
+    display: flex;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 80px;
+    color: coral;
+    
+}
+h2 span{
+    animation: animate 2s linear infinite;
+}
+h2 span:nth-child(1){
+    animation-delay: 0.3s;
+}
+h2 span:nth-child(2){
+    animation-delay: 0.4s;
+}
+h2 span:nth-child(3){
+    animation-delay: 0.6s;
+}
+h2 span:nth-child(4){
+    animation-delay: 0.8s;
+}
+h2 span:nth-child(5){
+    animation-delay: 1s;
+}
+h2 span:nth-child(6){
+    animation-delay: 1.2s;
+}
+@keyframes animate{
+    0%,80%{
+        color: transparent;
+        text-shadow: none;
+        }
+    100%{
+        color: white;
+        text-shadow: 0 0 10px coral,
+                    0 0 20px coral,
+                    0 0 40px coral,
+                    0 0 80px coral,
+                    0 0 120px coral,
+                    0 0 160px coral;
+    }
+}
+.details{
+    position: absolute;
+    top: 40%;
+    left: 42%;
+}
+label{
+    color: antiquewhite;
+    letter-spacing: 1px;
+    font-family: cursive;
+    color: antiquewhite;
+    font-size: 12px;
+    font-weight: bold;
+}
+.inp{
+     
+    padding: 2px;
+    bottom: 0px;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    outline: none;
+    color: beige;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+   border: none;
+    border-bottom: 2px solid white;
+    
+}
+.btn{
+    position: relative;
+    
+    display: flex;
+    font-weight: bold;
+    font-family: "montserrat",sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border:1.5px solid white;
+    padding: 6px 8px;
+    margin: 8px;
+    background: transparent;
+    min-width: 120px;
+    color: aliceblue;
+    transition: color 0.5s linear;
+   
+    
+
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+#progressbar{
+    position: fixed;
+    top: 0;
+
+    right: 0;
+    width: 8px;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top,#fcb045,#fd1d1d,#833ab4);
+    
+}
+
+.video-bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    min-height: 100%;
+    min-width: 100%;
+    width: 1380px;
+    height: 780px;
+    z-index: -100;
+}
+@media(min-aspect-ratio:16/9)
+{
+    .video-bg{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9)
+{
+    .video-bg{
+        width: auto;
+        height: 100%;
+    }
+}

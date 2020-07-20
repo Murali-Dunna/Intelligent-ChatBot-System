@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+   <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        
+        <script src="https://use.fontawesome.com/d2e8394c62.js"></script>         
+               <title>boTone</title>
+            <link rel="stylesheet" href="chat.css">
+    </head>
+  
+    <body > 
+                   
+       
+       
+  
+        <a class="button" href="Welcome.html">
+      <svg><rect></rect></svg>
+       HOME
+        </a>
+      
+  
+    <nav>
+           <div >
+            <a href="Welcome.html" class="heading">
+                BO<span class="highlight">T</span>ONE
+            </a>
+        </div>
+        
+        
+        <ul class="nav-links">
+        <li>
+          <a href="about.html">ABOUT</a>
+            </li>
+                  <li>
+            <a href="blog.html">BLOGS</a>
+            </li> 
+             
+                  <li>
+            <a href="resource.html">RESOURCES</a>
+            </li>  
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+      </ul>
+   </nav> 
+        <div class="container">
+            
+    <textarea readonly="true" id="botChat" class="textbox"></textarea> 
+
+<input type="text" name="name" placeholder="Type a message" autocomplete="off"  class="input-box" onKeypress="enterButton(event,document.getElementsByTagName('input')[0].value);" >  
+    <a onClick="answer(document.getElementsByTagName('input')[0].value)" class="send-btn" >Send</a>
+        
+        </div>      
+            
+<div id="progressbar"></div>
+        
+        
+<script style="font-size:1px; text-align: right;" >
+
+var you = "Me";
+botSays("\nTo chat, click Send or press Enter.\n\nType 'help' for a hint.\n\n") 
+         
+var Hello = ["HI", "HEY", "HOWDY",  "HOLA", "HELLO", "SUP"]
+var Goodbye = ["BYE", "SEE YA", "CYA", "LATER", "SEEYA"]
+var Greeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE DAY", "GOOD MORNING", "GOOD NIGHT"]
+var Name = [ "WHAT IS YOUR NAME", "WHAT'S YOUR NAME",  "WHO ARE YOU", "WHAT DO THEY CALL YOU", "COMO TE LLAMAS"]
+var Me = ["WHAT IS MY NAME","WHAT'S MY NAME"]
+var basic = ["CLASS"]
+var oops = ["OOPS"]
+var  copps= ["CONCEPT OF OOPS"]
+var object = ["OBJECT"]
+var encap = ["ENCAPSULATION"]
+var poly = ["POLYMORPHISM"]
+var inheritence = ["INHERITANCE"]
+var manipulate = ["MANIPULATORS"]
+var constructor = ["CONSTRUCTOR"]
+var destructor = ["DESTRUCTOR"]
+var inlinefun = ["INLINE FUNCTION"]
+var vfun = ["VIRTUAL FUNCTION"]
+var ffun = ["FRIEND FUNCTION"]
+var foverl = ["FUNCTION OVERLOADING"]
+var ooverl = ["OPERATOR OVERLOADING"]
+var aclass = ["ABSTRACT CLASS"]
+var t_oper = ["TERNARY OPERATOR"]
+var finalize = ["FINALIZE METHOD"]
+var arug = ["TYPES OF ARGUMENTS"]
+var skey = ["SUPER KEYWORD"]
+var moverl = ["METHOD OVERLOADING"]
+var inetf = ["INETRFACE"]
+var ehandling = ["EXCEPTION HANDLING"]
+var tokens = ["TOKENS"]
+var dbo_o = ["DIFFERENCE BETWEEN OVERLOADING AND OVERRIDING"]
+var dbc_o = ["DIFFERENCE BETWEEN CLASS AND OBJECT","DIFFERENCE BETWEEN A CLASS AND OBJECT"]
+var abst = ["ABSTRACTION"]
+var amodif = ["ACCESS MODIFIERS"]
+var smodif = ["SEALED MODIFIERS"]
+var dbn_o = ["DIFFERENCE BETWEEN NEW AND OVERRIDE"]
+var tconst = ["TYPES OF CONSTRUCTORS"]
+var early_lbind = ["EARLY AND LATE BINDING","EARLY","LATE BINDING"]
+var thisp = ["THIS","THIS POINTER"]
+var dbs_c = ["DIFFERENCE BETWEEN STRUCTURE AND CLASS"]
+var damodif = ["DEFAULT ACCESS MODIFIERS"]
+var virfun = ["PURE VIRTUAL FUNCTION","PURE VIRTUAL"]
+var oc_overl = ["OPERATORS THAT CANNOT BE OVERLOADED "]
+var run_poly = ["RUN TIME POLYMORPHISM"]
+var p_const = ["PARAMETER FOR CONSTRUCTORS"]
+var s_meth = ["STATIC METHOD CAN USE NONSTATIC MEMBERS"]
+var c_const = ["COPY CONSTRUCTOR"]
+var base_c_s_ss = ["BASE CLASS","SUBCLASS","SUPERCLASS"]
+var s_dynambind = ["STATIC AND DYNAMIC BINDING"]
+var inst_abst = ["INSTANCES CAN BE CREATED FOR ABSTRACT CLASS"]
+var k_overl = ["KEYWORD CAN BE USED FOR OVERLOADING"]
+var da_spec = ["DEFAULT ACCESS SPECIFIERS IN A CLASS DEFINITON"]
+var oops_ruse = ["OOPS CONCEPT IS USED AS  A REUSE MECHANISM"]
+
+
+
+
+
+
+
+
+
+var Actions = ["HELP", "DRINK", "CHALLENGE"]
+var Questions = ["QUESTION", "QUIZ", "CODE", "ANSWER","DO YOU KNOW HTML", "CSS", "JAVASCRIPT"];
+
+var colors = ["BLUE", "RED", "GREEN", "YELLOW", "WHITE", "BLACK", "SILVER", "GRAY" ,"AQUA"];
+var Else = true;
+var questions = [colors, Hello, Goodbye, Greeting, Name, Actions, Questions];
+
+
+var reactions=[BotHello, BotGoodbye,BotGreeting];
+var BotHello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP"]
+var BotGoodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS"]
+var BotGreeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE TO SEE YOU", "GOOD MORNING", "WELCOME"]
+var BotPleasant = ["Thanks.", "Good job.", "Cool.", "I see.", "Anyway.", "right-o."]
+
+function answer(x) {
+    var botOut = botChat.value;
+    document.getElementsByTagName("textarea")[0] = botChat
+   
+
+                document.getElementsByTagName("input")[0].value = ""
+                if (x.charAt(0).includes("!") === false){
+                youSay(x); botChat.scrollTop = botChat.scrollHeight;
+                } 
+                question = x.toUpperCase()
+                for (i = 0; i < 10; i++) {
+                          
+                if (question === "" || null) {
+                    setTimeout( function() { botSays("\nBot : What? You shy?"); botChat.scrollTop = botChat.scrollHeight;}, 600);
+                return; }
+                              
+                else if (question === "!MENU" ) {
+                botSays("\n\nCommands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, and !Me textDoes,. Play around."); botChat.scrollTop = botChat.scrollHeight;
+                return;
+                }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
+                    botSays("\n\nChanged the background color to " + x.slice(9) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.backgroundColor = x.slice(9);
+                return;
+                } else if (question.slice(0,6).includes("!TEXT ") ) {
+                    botSays("\n\nChanged the text color to " + x.slice(6) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.color = x.slice(6);
+                return;
+                } else if (question.slice(0,6).includes("!NAME ") ) {
+                    you = x.slice(6);
+                    botSays("\n\nHi! " + you); botChat.scrollTop = botChat.scrollHeight;
+                return;
+                } else if (question.slice(0,9).includes("!SECRETS") ) {
+                    botSays("\n\nWhat? I don't have any secrets. I've got nothing to hide."); botChat.scrollTop = botChat.scrollHeight;
+                return;
+                }
+                else if (question.slice(0,10).includes("!TUTORIAL") ) {
+                    botSays("\n\nWhat? I don't have a tutorial. Read my code, I'm not going to explain myself."); botChat.scrollTop = botChat.scrollHeight;
+                return;
+                }
+                else if (question.slice(0,10).includes("!BOTSAY") ) {
+                    botSays("\nBot : " + x.slice(8)); botChat.scrollTop = botChat.scrollHeight;
+                return;
+                } else if (question.slice(0,4).includes("!ME") ) {
+                    youDo(x.slice(4)); botChat.scrollTop = botChat.scrollHeight;
+                return;
+                }
+ 
+                if (question.includes(Goodbye[i])) {
+                    Else = false;
+                    setTimeout(botSays, 600, "\Bot : Godspeed. Leave an upvote?")
+                } else if (question.includes(Name[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : My name is BotOne. You can call me tonE.")
+                     } 
+                    
+                     else if (question.includes(Me[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Hello ! Murali") 
+                    }  
+                    
+                     else if (question.includes(basic[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : A class is simply a representation of a type of object. It is the blueprint/plan/template that describes the details of an object.") 
+                    }  
+                    else if (question.includes(oops[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : OOPS is abbreviated as Object Oriented Programming system in which programs are considered as a collection of objects. Each object is nothing but an instance of a class.") 
+                    }  
+                    
+                    else if (question.includes( copps[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Following are the concepts of OOPS Abstractio Encapsulation Inheritance Polymorphism") 
+                    } 
+                     else if (question.includes(object[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : An object is an instance of a class. It has its own state, behavior, and identity.") 
+                    } 
+                     else if (question.includes(encap[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Encapsulation is an attribute of an object, and it contains all data which is hidden. That hidden data can be restricted to the members of that class. Levels are Public, Protected, Private, Internal, and Protected Internal.") 
+                    } 
+                     else if (question.includes(poly [i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Polymorphism is nothing but assigning behavior or value in a subclass to something that was already declared in the main class. Simply, polymorphism takes more than one form.") 
+                    } 
+                     else if (question.includes(inheritence[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Inheritance is a concept where one class shares the structure and behavior defined in another class. If Inheritance applied to one class is called Single Inheritance, and if it depends on multiple classes, then it is called multiple Inheritance.") 
+                    } 
+                     else if (question.includes(manipulate[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Manipulators are the functions which can be used in conjunction with the insertion (<<) and extraction (>>) operators on an object. Examples are endl and setw.") 
+                    } 
+                     else if (question.includes(constructor[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : A constructor is a method used to initialize the state of an object, and it gets invoked at the time of object creation. Rules for constructor are: Constructor Name should be the same as a class name. A constructor must have no return type.") 
+                    } 
+                     else if (question.includes(destructor[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : A destructor is a method which is automatically called when the object is made of scope or destroyed. Destructor name is also same as class name but with the tilde symbol before the name.") 
+                    } 
+                     else if (question.includes(inlinefun[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : An inline function is a technique used by the compilers and instructs to insert complete body of the function wherever that function is used in the program source code.") 
+                    } 
+                     else if (question.includes(vfun[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : A virtual function is a member function of a class, and its functionality can be overridden in its derived class. This function can be implemented by using a keyword called virtual, and it can be given during function declaration.") 
+                    } 
+                     else if (question.includes(ffun[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot :A friend function is a friend of a class that is allowed to access to Public, private, or protected data in that same class. If the function is defined outside the class cannot access such information.") 
+                    } 
+                     else if (question.includes(foverl[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Function overloading is a regular function, but it can perform different tasks. It allows the creation of several methods with the same name which differ from each other by the type of input and output of the function.") 
+                    } 
+                     else if (question.includes(ooverl[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Operator overloading is a function where different operators are applied and depends on the arguments. Operator,-,* can be used to pass through the function, and it has its own precedence to execute.") 
+                    } 
+                     else if (question.includes(aclass[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : An abstract class is a class which cannot be instantiated. Creation of an object is not possible with an abstract class, but it can be inherited. An abstract class can contain only an Abstract method. Java allows only abstract method in abstract class while other languages allow non-abstract method as well.") 
+                    } 
+                     else if (question.includes(t_oper[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : The ternary operator is said to be an operator which takes three arguments. Arguments and results are of different data types, and it depends on the function. The ternary operator is also called a conditional operator.") 
+                    } 
+                     else if (question.includes(finalize[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Finalize method helps to perform cleanup operations on the resources which are not currently used. Finalize method is protected, and it is accessible only through this class or by a derived class.") 
+                    } 
+                     else if (question.includes(arug[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot :A parameter is a variable used during the declaration of the function or subroutine, and arguments are passed to the function body, and it should match with the parameter defined. There are two types of Arguments. \n Call by Value – Value passed will get modified only inside the function, and it returns the same value whatever it is passed into the function. \n Call by Reference – Value passed will get modified in both inside and outside the functions and it returns the same or different value.") 
+                    } 
+                     else if (question.includes(skey[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : The super_keyword is used to invoke the overridden method, which overrides one of its superclass methods. This keyword allows to access overridden methods and also to access hidden members of the superclass.") 
+                    } 
+                     else if (question.includes(moverl[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Method overriding is a feature that allows a subclass to provide the implementation of a method that overrides in the main class. It will override the implementation in the superclass by providing the same method name, same parameter, and same return type.") 
+                    } 
+                     else if (question.includes(inetf[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : An interface is a collection of an abstract method. If the class implements an interface, it thereby inherits all the abstract methods of an interface.") 
+                    } 
+                     else if (question.includes(ehandling[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : An exception is an event that occurs during the execution of a program. Exceptions can be of any type – Runtime exception, Error exceptions. Those exceptions are adequately handled through exception handling mechanism like try, catch, and throw keywords.") 
+                    } 
+                     else if (question.includes(tokens[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : A compiler recognizes a token, and it cannot be broken down into component elements. Keywords, identifiers, constants, string literals, and operators are examples of tokens.") 
+                    } 
+                     else if (question.includes(dbo_o[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Overloading is static Binding, whereas Overriding is dynamic Binding. Overloading is nothing but the same method with different arguments, and it may or may not return the equal value in the same class itself.") 
+                    } 
+                     else if (question.includes(dbc_o[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : An object is an instance of a class. Objects hold multiple information, but classes don’t have any information. Definition of properties and functions can be done in class and can be used by the object.") 
+                    } 
+                     else if (question.includes(abst[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Abstraction is a useful feature of OOPS, and it shows only the necessary details to the client of an object. Meaning, it shows only required details for an object, not the inner constructors, of an object. Example – When you want to switch on the television, it is not necessary to know the inner circuitry/mechanism needed to switch on the TV. Whatever is required to switch on TV will be shown by using an abstract class.") 
+                    } 
+                     else if (question.includes(amodif[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Access modifiers determine the scope of the method or variables that can be accessed from other various objects or classes. There are five types of access modifiers, and they are as follows: Private, Protected ,Public,Friend,Protected Friend") 
+                    } 
+                     else if (question.includes(smodif[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Sealed modifiers are the access modifiers where the methods can not inherit it. Sealed modifiers can also be applied to properties, events, and methods. This modifier cannot be used to static members.") 
+                    } 
+                     else if (question.includes(dbn_o[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : The new modifier instructs the compiler to use the new implementation instead of the base class function. Whereas, Override modifier helps to override the base class function.") 
+                    } 
+                     else if (question.includes(tconst[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : There are three types of constructors: \n –  Default Constructor – With no parameters.\n –  Parametric Constructor – With Parameters. Create a new instance of a class and also passing arguments simultaneously. \n–  Copy Constructor – Which creates a new object as a copy of an existing object.") 
+                    } 
+                     else if (question.includes(early_lbind[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Early binding refers to the assignment of values to variables during design time, whereas late Binding refers to the assignment of values to variables during run time.") 
+                    } 
+                     else if (question.includes(thisp[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : THIS pointer refers to the current object of a class. THIS keyword is used as a pointer which differentiates between the current object with the global object. It refers to the current object.") 
+                    } 
+                     else if (question.includes(dbs_c[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : The default access type of a Structure is public, but class access type is private. A structure is used for grouping data, whereas a class can be used for grouping data and methods. Structures are exclusively used for data, and it doesn’t require strict validation, but classes are used to encapsulate and inherent data, which requires strict validation.") 
+                    } 
+                     else if (question.includes(damodif[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : The default access modifier of a class is Private by default.") 
+                    } 
+                     else if (question.includes(virfun[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : A pure virtual function is a function which can be overridden in the derived class but cannot be defined. A virtual function can be declared as Pure by using the operator =0.") 
+                    } 
+                     else if (question.includes(oc_overl[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Following are the operators that cannot be overloaded - \nScope Resolution (::)\n Member Selection (.)\n Member selection through a pointer to function (.*)") 
+                    } 
+                     else if (question.includes(run_poly[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Dynamic or Run time polymorphism is also known as method overriding in which call to an overridden function is resolved during run time, not at the compile time. It means having two or more methods with the same name, same signature but with different implementation.") 
+                    } 
+                     else if (question.includes(p_const[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : No, we do not require a parameter for constructors.") 
+                    } 
+                    
+                     else if (question.includes(c_const[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : This is a special constructor for creating a new object as a copy of an existing object. There will always be only one copy constructor that can be either defined by the user or the system.") 
+                    } 
+                     else if (question.includes(base_c_s_ss[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : The base class is the most generalized class, and it is said to be a root class.A Subclass is a class that inherits from one or more base classes.The superclass is the parent class from which another class inherits.") 
+                    } 
+                     else if (question.includes(s_dynambind[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Binding is nothing but the association of a name with the class. Static Binding is a binding in which name can be associated with the class during compilation time, and it is also called as early Binding.") 
+                    } 
+                     else if (question.includes(inst_abst[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Zero instances will be created for an abstract class. In other words, you cannot create an instance of an Abstract Class.") 
+                    } 
+                     else if (question.includes(k_overl[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Operator keyword is used for overloading.") 
+                    } 
+                     else if (question.includes(da_spec[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Private access specifier is used in a class definition.") 
+                    } 
+                     else if (question.includes(oops_ruse[i])) {
+                    Else = false; setTimeout(botSays, 600, "\nBot : Inheritance is the OOPS concept that can be used as a reuse mechanism.") 
+                    } 
+                    
+                    
+                    
+                    
+                    else if (question.includes(Actions[i])) {
+                    Else = false; if (question.includes("CHALLENGE")) { 
+                        setTimeout(botSays, 600, "\nBot : Challenge my creator. Go for it.") 
+                    }
+                    else { setTimeout(botSays, 600, "\nBot : How can I help?  Use my commands !Menu & !Tutorial to see what I can do.") }
+                } else if (question.includes(Questions[i])) {
+                    Else = false; if (Questions[i].includes("HTML")) { setTimeout(botSays, 600, "\nBot : Ask my creator. Go for it. he'll try to help you. I'm just a code, I don't know HOW to code.") } else { setTimeout(botSays, 600, "\nBot : How can I help? Use my commands !Menu & !Tutorial to see what I can do.") }
+                } else if ( question.includes(Greeting[i]) ) {
+                    Else = false; if (Greeting[i].includes("HOW")&&Greeting[i].includes("YOU")) {
+                    var reactHello = "How am I";
+                    var reactGreeting = "I would say I am 40% complete." 
+                    }
+                    else {
+                   num = Math.ceil(Math.random()*3)
+                    var reactHello = Greeting[num]
+                    reactHello = reactHello.toLowerCase();
+                    reactHello = reactHello.charAt(0).toUpperCase() + reactHello.slice(1);
+                    var reactGreeting = "Same old. Getting coded mostly.";
+                    }
+                    var reactPleasant = BotPleasant[num]
+                    setTimeout(botSays, 600, "\nBot : " + reactHello + ". " + reactGreeting + " " + reactPleasant )
+                  } else if (question.includes(Hello[i])) {
+                  var reactHello = Hello[i];
+                  reactHello = reactHello.toLowerCase();
+                  reactHello = reactHello.charAt(0).toUpperCase() + reactHello.slice(1);
+                  var reactGreeting = "";
+                  var reactPleasant = ""
+                    Else = false;
+                      setTimeout(botSays, 600, "\nBot : " + reactHello + ".")
+                } else { } }  setTimeout( function() { if (Else === true) {
+                    botSays("\n\nSorry,I can't do that"); } } , 700);  setTimeout( function() {Else = true; 
+                    botChat.scrollTop = botChat.scrollHeight;}, 730)
+            } function botSays(x) {
+                document.getElementsByTagName("textarea")[0].innerHTML += x;
+            } function youSay(x) { botSays("\n"+ you + " \ : " + x)
+            }
+            function youDo(x) { botSays("\n"+ you + " " + x)                                            
+            } function enterButton(e, x) { if (e.keyCode == 13) { answer(x); }   }    
+        </script>
+        
+             <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+    $(window).scroll(function(){
+        var scroll=$(window).scrollTop(),
+            dh=$(document).height(),
+            wh=$(window).height();
+        scrollPercent=(scroll/(dh-wh))*100;
+        $('#progressbar').css('height',scrollPercent + '%');
+    })
+</script>
+        
+    </body>
+</html>

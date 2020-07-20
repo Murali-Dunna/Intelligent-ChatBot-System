@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<meta http-equiv="X-U-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="welcome.css">
+    <title> Welcome</title>
+</head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+    $(window).scroll(function(){
+        var scroll=$(window).scrollTop(),
+            dh=$(document).height(),
+            wh=$(window).height();
+        scrollPercent=(scroll/(dh-wh))*100;
+        $('#progressbar').css('height',scrollPercent + '%');
+    })
+    
+    
+    </script>
+<body>
+      
+ 
+         <section class="wrapper">
+        <video autoplay loop class="video-bg" muted plays-inline >
+        <source src="bg1.mp4">
+      </video>
+         
+    
+    <div class="image">
+        <a href="Welcome.html"><img class="logo" src="logo1.png" height="40"  width="40" ></a>    
+        </div>
+             
+             <h2>
+             <span>B</span>
+             <span>O</span>
+             <span>T</span>
+             <span>O</span>
+             <span>N</span>
+             <span>E</span>
+              </h2>
+              
+         
+          
+            <a href="chat.html" class="register">GET STARTED</a>
+             
+      
+    <a class="button" href="login.html">
+      <svg><rect></rect></svg>
+       LOGOUT
+        </a>
+        
+   
+    
+    <nav>
+          <div >
+            <a href="Welcome.html" class="heading">
+                BO<span class="highlight">T</span>ONE
+            </a>
+        </div>
+        <ul class="nav-links">
+        <li>
+          <a href="about.html">ABOUT</a>
+            </li>
+                  <li>
+            <a href="blog.html">BLOGS</a>
+            </li> 
+              
+                  <li>
+            <a href="resource.html">RESOURCES</a>
+            </li>  
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+     </ul>
+  </nav>
+ </section>
+
+   
+    </body>
+   
+
+
+
+
+</html>

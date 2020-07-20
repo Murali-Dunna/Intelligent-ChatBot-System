@@ -1,0 +1,261 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+nav{
+
+
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color:transparent;
+    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.heading{
+
+    position:absolute;
+    top: 2.4vh;
+    left: 8vw;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: aquamarine;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.5s linear;
+    transition-timing-function: cubic-bezier(0.4,1.6,0.5,0.7);
+}
+.heading:hover{
+   
+   color:coral;
+    
+}
+.highlight{
+    font-size: 12px;
+    font-family:sans-serif;
+    color: coral;
+    font-weight: 900;
+   
+}
+
+section{
+    background:rgba(255, 134, 80, 0.05);
+    height: 100vh;
+}
+h2{
+    position: absolute;
+    top: 35%;
+    left: 34%;
+    display: flex;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 100px;
+    color: coral;
+    
+}
+h2 span{
+    animation: animate 2s linear infinite;
+}
+h2 span:nth-child(1){
+    animation-delay: 0.3s;
+}
+h2 span:nth-child(2){
+    animation-delay: 0.4s;
+}
+h2 span:nth-child(3){
+    animation-delay: 0.6s;
+}
+h2 span:nth-child(4){
+    animation-delay: 0.8s;
+}
+h2 span:nth-child(5){
+    animation-delay: 1s;
+}
+h2 span:nth-child(6){
+    animation-delay: 1.2s;
+}
+@keyframes animate{
+    0%,80%{
+        color: transparent;
+        text-shadow: none;
+        }
+    100%{
+        color: white;
+        text-shadow: 0 0 10px coral,
+                    0 0 20px coral,
+                    0 0 40px coral,
+                    0 0 80px coral,
+                    0 0 120px coral,
+                    0 0 160px coral;
+    }
+}
+
+.register{
+    position: absolute;
+    top: 60%;
+    right: 45%;
+    display: flex;
+    font-weight: bold;
+    font-family: "montserrat",sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border:1.5px solid white;
+    padding: 8px 10px;
+    margin: 10px;
+    min-width: 120px;
+    color: aliceblue;
+    transition: color 0.5s linear;
+    
+}
+.register:hover{
+    color: black;
+}
+.register::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: coral;
+    z-index: -1;
+    transition: transform 0.6s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+    transform: scaleY(0);
+}
+.register:hover::before{
+   
+    transform: scaleY(1);
+}
+
+
+.image{
+    top: 1.5vh;
+    left: 5vw;
+   position: absolute;
+    display: flex;
+    text-decoration: none;
+   
+}
+.logo{
+    border-radius: 0%;
+}
+.nav-links{
+    float: right;
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: white;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-links a:hover{
+    background: coral;
+    color: white;
+    border-radius: 1px;
+    padding: 4px;
+}
+
+.button{
+    position: absolute;
+    top: 5vh;
+    left: 94vw;
+   width: 110px;
+    height: 20px;
+    text-align: center;
+    line-height: 22px;
+    list-style-type: circle;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 
+   
+    
+}
+.button svg,
+.button svg rect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    
+    
+}
+.button svg rect{
+   
+               stroke:  aqua;
+            stroke-width: 4;
+            transition: 2s ;
+            stroke-dasharray: 20 110;
+            stroke-dashoffset: 280;
+}
+.button:hover svg rect{
+        stroke: #ff8000;
+            stroke-dasharray: 110 20 ;
+            stroke-dashoffset: 0;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+#progressbar{
+    position: fixed;
+    top: 0;
+
+    right: 0;
+    width: 8px;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top,#fcb045,#fd1d1d,#833ab4);
+    
+}
+
+.video-bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    min-height: 100%;
+    min-width: 100%;
+    width: 1380px;
+    height: 780px;
+    z-index: -100;
+}
+@media(min-aspect-ratio:16/9)
+{
+    .video-bg{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9)
+{
+    .video-bg{
+        width: auto;
+        height: 100%;
+    }
+}

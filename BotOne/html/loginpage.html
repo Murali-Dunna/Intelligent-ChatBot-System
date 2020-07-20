@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<meta http-equiv="X-U-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loginpage.css">
+    <title> LOGIN</title>
+</head>
+<body>
+      
+ 
+         <section class="wrapper">
+        <video autoplay loop class="video-bg" muted plays-inline >
+        <source src="bg1.mp4">
+      </video>
+          <h2>
+             <span>B</span>
+             <span>O</span>
+             <span>T</span>
+             <span>O</span>
+             <span>N</span>
+             <span>E</span>
+              </h2>
+             
+             
+              <div class="details">
+            <form name="login">
+            <label> USERNAME</label><br><br>
+            <input type="text" class="inp" name="userid"/><br><br><br>
+
+            <label> PASSWORD</label><br><br>
+            <input type="password" class="inp" name="pswrd"/><br><br><br>
+    <input type="button" class="btn" onclick="check(this.form)" value="Login"/><span></span><br>
+    <input type="reset"  class="btn"  value="Clear"/>
+    </form>
+             </div>
+             
+ </section>
+
+   
+    </body>
+   <script language="javascript">
+    function check(form)
+    {
+     
+     if(form.userid.value == "murali" && form.pswrd.value == "1234"||
+        form.userid.value == "admin" && form.pswrd.value == "admin")
+      {
+        window.open('welcome.html')
+      }
+     else
+     {
+       alert("Username or password is wrong")
+      }
+    }
+    </script>
+
+
+
+
+</html>

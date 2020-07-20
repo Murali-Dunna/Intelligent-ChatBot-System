@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<meta http-equiv="X-U-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css">
+    <title> Blogs</title>
+</head>
+    <body>
+            
+        
+        <div class="image">
+        <a href="Welcome.html"><img class="logo" src="logo1.png" height="40"  width="40" ></a>    
+        </div>
+  
+        <a class="button" href="login.html">
+      <svg><rect></rect></svg>
+       LOGOUT
+        </a>
+  
+    <nav>
+           <div >
+            <a href="Welcome.html" class="heading">
+                BO<span class="highlight">T</span>ONE
+            </a>
+        </div>
+        
+        
+        <ul class="nav-links">
+        <li>
+          <a href="about.html">ABOUT</a>
+            </li>
+                  <li>
+            <a href="blog.html">BLOGS</a>
+            </li> 
+            
+                  <li>
+            <a href="resource.html">RESOURCES</a>
+            </li>  
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+      </ul>
+   </nav>    
+            
+      <section> 
+         
+        <div class="container">
+            <div class="box">
+            <div class="content">
+                <h2>01</h2>
+                <h3>11 million devs actively use JavaScript :</h3>
+                <p>
+            In Asia, nearly 2 out of 5 developers build apps for messaging platforms and/or chatbots. However, only 22% of North American and Western European devs are developing messaging or chatbot apps. The popularity of messaging apps such as LINE and WeChat in Asian countries may be the reason for the high number of messaging platform devs.             
+                
+                </p>
+                <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+                <div class="container">
+            <div class="box">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Understanding and Creating ChatBots :</h3>
+                <p>
+                     It is not uncommon to come across a site where you are asked to chat, or where a question is posted to you that starts a conversation. It is getting harder to tell if you are talking with a person or with an automated system. Often, the entity on the other side of a chat is an automated system or bot, and not a real person !
+                </p>
+                <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+                <div class="container">
+            <div class="box">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Website design trends for 2020 :</h3>
+                <p>
+                One of the aspects that will be greatly improved in 2020 is animation. Animation and GIFs are already an important part of every website and every mobile app. Thanks to HTML and JavaScript software development loading time will be shorter and website speed will be increased. Websites will become more responsive and their SEO will be better.           
+                
+                </p>
+                <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+ </section>
+        <section>
+                    <div class="container">
+            <div class="box">
+            <div class="content">
+                <h2>04</h2>
+                <h3>Benefit from CommBox innovation :</h3>
+                <p>
+                CommBox recently announced that it is moving into the education sector by making its technology solutions available to both universities and businesses. This is a significant move that will likely have a big impact, especially as it rolls out technology with a global appeal. It comes at a time when, according to reports, the ed tech sector is predicted to surpass $45Billion.             
+                
+                </p>
+                <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+            
+                               <div class="container">
+            <div class="box">
+            <div class="content">
+                <h2>05</h2>
+                <h3>To have a friend in our hand :</h3>
+                <p>
+                Smart companion: We can talk to our chatbot at anytime, anywhere. With artificial intelligence now capable of taking over a large number of human jobs, apps on our phones can help us cope with our daily hassles. Some chatbot apps can even become a good friend that help calm our anxiety, analyze our negative thoughts and improve our mental health.               
+                </p>
+                <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+  </section>
+      <div id="progressbar"></div>  
+    </body>
+     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+    $(window).scroll(function(){
+        var scroll=$(window).scrollTop(),
+            dh=$(document).height(),
+            wh=$(window).height();
+        scrollPercent=(scroll/(dh-wh))*100;
+        $('#progressbar').css('height',scrollPercent + '%');
+    })
+</script>
+    
+</html>
